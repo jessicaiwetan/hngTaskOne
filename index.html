@@ -117,13 +117,13 @@
            const currentDay=document.querySelector('[data-test-id="currentDay"]');
            const currentDate=document.querySelector('[data-test-id="currentDate"]');
 
-           setInterval(()=>{
-            const now=new Date();
-            const localTime=now.toLocaleTimeString('en-NG');
-            currentTimeUTC.textContent=localTime;
-            currentDay.textContent=now.toLocaleDateString('en-NG',{weekday:"long"});
-            currentDate.textContent=now.toLocaleDateString('en-NG',{day:'numeric',month:"long",year:"numeric"});
-           },1000);
+          setInterval(() => {
+      const now = new Date();
+      currentTimeUTC.textContent = now.toUTCString();
+      currentDay.textContent = now.toLocaleDateString('en-US', { weekday: 'long' });
+      currentDate.textContent = now.toLocaleDateString('en-US', { day: 'numeric', month: 'long', year: 'numeric' });
+    }, 1000);
+
 
         </script>
     </body>
