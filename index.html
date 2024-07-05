@@ -10,14 +10,14 @@
         <header>
             <div class="container">
                 <div class="timeDayDate">
-                <div class="currentTimeUTC">
-                    <p>Current Time (UTC):<span data-test-id="currentTimeUTC"></span></p>
+                <div data-testid="currentTimeUTC">
+                    <p>Current Time(UTC):</p>
                     </div>
-                    <div class="currentDay">
-                    <p>Current Day of the Week:<span data-test-id="currentDay"></span></p>
+                    <div data-testid="currentDay">
+                    <p>Current Day of the Week:</p>
                 </div>
-                <div class="currentDate">
-                    <p><span data-test-id="currentDate">Current Date:</span></p>
+                <div data-testid="currentDate">
+                    <p>Current Date:</p>
                 </div>
             </div>
                 <nav>
@@ -32,13 +32,13 @@
             <main>
             <section class="profilePicture">
                 <div data-testid="slackProfilePicture">
-                <img src="./slackprofilepic.png">
+                <img src="./slackProfilePicture.png">
             </div>
         </section>
         <section class="displayName">
             <div data-testid="slackDisplayName">
                 <div class="About">
-                    <h1><span>H</span>ello, I'm Seia<span>H</span></h1>
+                    <h1><span>H</span>ello, I'm <span data-testid="slackDisplayName">Seiah</span></h1>
                     <p>I am a Frontend Developer currently based in Delta State, Nigeria. I Strive to Build really Beautiful and Impressive Web Applications through Carefully Crafted code and User-centric Designs.</p>
                     </div>
                 </div>
@@ -51,8 +51,8 @@
                               as i am now able to build projects from Figma designs demonstrating my understanding of HTML structures and CSS fundamentals for styling.
                                Building projects is one fantastic way i've been able to solidify my knowledge and apply concepts learned in HTML and CSS. </p>
 
-                               <p>It is also worthy of note that the <span data-test-id="hnglink"><a href="https://hng.tech/learn">hng.tech/learn</a></span> tech program helped to facilitate the learning process and kept me on my toes while gaining experiences on tasks.</p>
-                               <p>Other helpful tools like <span data-test-id="keywordlink"><a href="https://keyword.dog">keyword.link</a></span> and <span data-test-id="scrapeanyweblink"><a href="https://scrapeanyweb.site">scrapeanyweb</a></span> were a mandatory requirement for my first official task on the hng internship marathon program.</p>
+                               <p>It is also worthy of note that the <span data-testid="hngLink"><a href="https://hng.tech/learn">hng.tech/learn</a></span> tech program helped to facilitate the learning process and kept me on my toes while gaining experiences on tasks.</p>
+                               <p>Other helpful tools like <span data-testid="keywordLink"><a href="https://keyword.dog">keyword.link</a></span> and <span data-testid="scrapeanywebLink"><a href="https://scrapeanyweb.site">scrapeanyweb</a></span> were a mandatory requirement for my first official task on the hng internship marathon program.</p>
                         
                         </div>
                     
@@ -106,24 +106,23 @@
             </div>
         </section>
             <div class="contact-mail">
-                <div data-test-id="slackEmail">
-                <p>Contact Me via email <a href="mailto:jessicaiwetan2@gmail.com"><button> jessicaiwetan2@gmail.com </button></a></p>
+                <div data-testid="slackEmail">
+                <p>Contact Me via email <a href="mailto:jessicaiwetan2@gmail.com"><button data-testid="slackEmail">jessicaiwetan2@gmail.com </button></a></p>
             </div>
                 
             </main>
 
         <script>
-           const currentTimeUTC=document.querySelector('[data-test-id="currentTimeUTC"]');
-           const currentDay=document.querySelector('[data-test-id="currentDay"]');
-           const currentDate=document.querySelector('[data-test-id="currentDate"]');
+           const currentTimeUTC=document.querySelector('[data-testid="currentTimeUTC"]');
+           const currentDay=document.querySelector('[data-testid="currentDay"]');
+           const currentDate=document.querySelector('[data-testid="currentDate"]');
 
-          setInterval(() => {
+           setInterval(() => {
       const now = new Date();
       currentTimeUTC.textContent = now.toUTCString();
       currentDay.textContent = now.toLocaleDateString('en-US', { weekday: 'long' });
       currentDate.textContent = now.toLocaleDateString('en-US', { day: 'numeric', month: 'long', year: 'numeric' });
     }, 1000);
-
 
         </script>
     </body>
