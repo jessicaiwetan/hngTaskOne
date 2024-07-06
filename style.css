@@ -200,6 +200,7 @@ font-family: cursive;
     color: rgb(79, 71, 71);
      text-shadow: 2px 2px black;
      font-size: 24px;
+     white-space: normal;
      
  }
 
