@@ -199,7 +199,8 @@ font-family: cursive;
  .year-two h2 {
     color: rgb(79, 71, 71);
      text-shadow: 2px 2px black;
-     white-space: nowrap;
+     font-size: 24px;
+     
  }
 
  .year-two h2 span {
